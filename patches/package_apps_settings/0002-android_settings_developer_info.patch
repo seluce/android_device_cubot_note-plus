@@ -1,0 +1,54 @@
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index 3e93d41..a352391 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -33,6 +33,8 @@
+     <!-- Device Info --> <skip />
+     <!-- Device Info screen. Used for a status item's value when the proper value is not known -->
+     <string name="device_info_default">Unknown</string>
++    <!-- Device Info screen. Used for a status item's value when the proper value is not known -->
++    <string name="author_info_default">seluce</string>
+     <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+     <plurals name="show_dev_countdown">
+         <item quantity="one">You are now <xliff:g id="step_count">%1$d</xliff:g> step away from being a developer.</item>
+@@ -2355,6 +2357,8 @@
+     <string name="firmware_version">Android version</string>
+     <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
+     <string name="security_patch">Android security patch level</string>
++    <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
++    <string name="author_info">Device Maintainer</string>
+     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
+     <string name="model_info">Model</string>
+     <!-- About phone screen, fcc equipment id label  [CHAR LIMIT=40] -->
+diff --git a/res/xml/device_info_settings.xml b/res/xml/device_info_settings.xml
+index f756b26..0f87d0b 100644
+--- a/res/xml/device_info_settings.xml
++++ b/res/xml/device_info_settings.xml
+@@ -133,6 +133,14 @@
+                         android:data="https://source.android.com/security/bulletin/" />
+         </PreferenceScreen>
+ 
++        <!-- Author Info -->
++        <PreferenceScreen android:key="author_info"
++                android:title="@string/author_info"
++                android:summary="@string/author_info_default">
++                <intent android:action="android.intent.action.VIEW"
++                        android:data="https://github.com/seluce" />
++        </PreferenceScreen>
++
+         <!-- Device FCC equipment id -->
+         <com.android.settings.DividerPreference
+                 android:key="fcc_equipment_id"
+diff --git a/src/com/android/settings/DeviceInfoSettings.java b/src/com/android/settings/DeviceInfoSettings.java
+index cba4865..c7f5fa3 100644
+--- a/src/com/android/settings/DeviceInfoSettings.java
++++ b/src/com/android/settings/DeviceInfoSettings.java
+@@ -67,6 +67,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
+     private static final String KEY_BASEBAND_VERSION = "baseband_version";
+     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
+     private static final String KEY_SECURITY_PATCH = "security_patch";
++    private static final String KEY_AUTHOR_INFO = "author_info";
+     private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
+     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
+     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
+
