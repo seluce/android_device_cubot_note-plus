@@ -29,6 +29,9 @@ include $(BUILD_SHARED_LIBRARY)
 # power feature
 include $(CLEAR_VARS)
 
+LOCAL_SRC_FILES := \
+    power-feature.c
+
 LOCAL_MODULE := power-feature
 LOCAL_MODULE_TAGS := optional
 
