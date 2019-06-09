@@ -1,7 +1,7 @@
 #!/bin/bash
 cd ../../../..
 cd packages/apps/Settings
-patch -p1 -b < ../../../device/CUBOT/NOTE_PLUS/patches/package_apps_settings/0002-android_settings_developer_info.patch
+patch -p1 -b < ../../../device/CUBOT/NOTE_PLUS/patches/package_apps_settings/0001-android_settings_developer_info.patch
 git clean -f -d
 cd ../../..
 cd frameworks/av
