@@ -10,8 +10,9 @@ cd ../..
 cd frameworks/base
 patch -p1 < ../../device/CUBOT/NOTE_PLUS/patches/frameworks_base/0001-frameworks_base.patch
 patch -p1 < ../../device/CUBOT/NOTE_PLUS/patches/frameworks_base/0002-Fix-Minior-Bugs.patch
-# only use the optional patch for LineageOS to fix MicroG signature spoofing
-# patch -p1 < ../../device/CUBOT/NOTE_PLUS/patches/frameworks_base/0003-frameworks_base_signature_spoofing.patch
+# only use the optional patch for LineageOS and /e/ to fix MicroG signature spoofing
+# patch -p1 < ../../device/CUBOT/Echo/patches/frameworks_base/0005-frameworks_base_signature_spoofing.patch
+# git clean -f -d
 cd ../..
 cd frameworks/native
 patch -p1 < ../../device/CUBOT/NOTE_PLUS/patches/frameworks_native/0001-frameworks_native.patch
