@@ -295,4 +295,7 @@
     <!-- If supported, are dreams enabled? (by default) -->
     <bool name="config_dreamsEnabledByDefault">false</bool>
 
+    <!-- Configuration to support SIM contact batch operation -->
+    <bool name="config_sim_phonebook_batch_operation">false</bool>
+
 </resources>
