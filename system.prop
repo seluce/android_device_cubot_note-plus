@@ -144,6 +144,3 @@ persist.mtk.volte.enable=1
 persist.mtk_vilte_support=1
 ro.mtk_vilte_ut_support=0
 persist.mtk_ussi_support=1
-
-# OTA-Updater
-cm.updater.uri=https://raw.githubusercontent.com/seluce/OTA-Updater/NOTE_PLUS/api
