@@ -1,7 +1,6 @@
 # inherit from the proprietary version
 -include vendor/CUBOT/NOTE_PLUS/BoardConfigVendor.mk
 
-
 # Disable NINJA
 #USE_NINJA := false
 
@@ -206,4 +205,4 @@ BOARD_SEPOLICY_DIRS := \
 BOARD_SECCOMP_POLICY += device/CUBOT/NOTE_PLUS/seccomp
 
 # build old-style zip files (required for ota updater)
-BLOCK_BASED_OTA := false
+BLOCK_BASED_OTA := true
