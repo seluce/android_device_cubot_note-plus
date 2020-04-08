@@ -1,9 +1,9 @@
-From bfecbaf9334117e8c11293ab12a7e9a07ceae8b3 Mon Sep 17 00:00:00 2001
-From: darklord4822 <darklord4722@gmail.com>
-Date: Sat, 7 Oct 2017 14:16:26 +0000
+From 2816cb75ca7e79ece9eafee74997ed75bf9d8bef Mon Sep 17 00:00:00 2001
+From: seluce <ferris.daehn@outlook.de>
+Date: Thu, 9 Apr 2020 00:56:10 +0200
 Subject: [PATCH] changes for MTK
 
-Change-Id: I3eeaa80b75e5203d3d8345790dadfbcff8ee2a78
+Change-Id: I2795815123c929b72d7dc8d8e48fc8096ee7e5ce
 ---
  include/netutils/ifc.h      |  15 ++
  init/init.cpp               |   2 +-
@@ -71,22 +71,22 @@ index 345d442..f93d0c5 100644
  extern int have_console;
  extern std::string console_name;
 diff --git a/init/service.cpp b/init/service.cpp
-index 8127e70..6be06db 100644
+index a5334f4..dad36ec 100644
 --- a/init/service.cpp
 +++ b/init/service.cpp
-@@ -373,9 +373,9 @@ bool Service::Start() {
-         }
+@@ -374,9 +374,9 @@ bool Service::Start() {
          if (rc == 0 && scon == mycon) {
              ERROR("Service %s does not have a SELinux domain defined.\n", name_.c_str());
--            free(mycon);
--            free(fcon);
--            return false;
-+            //free(mycon);
-+            //free(fcon);
-+            //return false;
+             if (selinux_status_getenforce() > 0) {
+-                free(mycon);
+-                free(fcon);
+-                return false;
++                //free(mycon);
++                //free(fcon);
++                //return false;
+             }
          }
          free(mycon);
-         free(fcon);
 diff --git a/libcutils/Android.mk b/libcutils/Android.mk
 index 7a92253..c080b2d 100644
 --- a/libcutils/Android.mk
@@ -512,5 +512,5 @@ index 7739cf4..72832aa 100644
 +
 +#endif
 -- 
-1.9.1
+2.7.4
 
