@@ -114,17 +114,12 @@ PRODUCT_PACKAGES += \
 
 # FM Radio
 PRODUCT_PACKAGES += \
-    EngineerMode
-
-# FM Radio
-PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
 # Camera
 PRODUCT_PACKAGES += \
     Snap \
-    guiext-server
 
 # CM14 mtk symbols
 PRODUCT_PACKAGES += \
