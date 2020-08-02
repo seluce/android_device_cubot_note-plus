@@ -95,6 +95,9 @@ ro.media.maxmem=500000000
 #ro.mtk_deinterlace_support=1
 mdc_initial_max_retry=10
 
+# Time Zone
+persist.sys.timezone=Europe/Berlin
+
 # Telephony
 rild.libpath=mtk-ril.so
 rild.libargs=-d /dev/ttyC0
@@ -144,6 +147,3 @@ persist.mtk.volte.enable=1
 persist.mtk_vilte_support=1
 ro.mtk_vilte_ut_support=0
 persist.mtk_ussi_support=1
-
-# OTA-Updater
-cm.updater.uri=http://noteplus.seluce.bplaced.net/api
