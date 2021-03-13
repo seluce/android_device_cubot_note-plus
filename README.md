@@ -16,6 +16,23 @@ Camera  | Main 16MP / Front 16MP, autofocus, LED flash
 Copyright 2019 - The LineageOS Project.
 Thanks to olegsvs, danielhk, Zormax, xcore995, SRT.
 
+Compiling on Ubuntu 20.10
+---------------
+First add device patches from device tree into Lineage
+```
+. build/envsetup.sh 
+
+export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m"
+
+./prebuilts/sdk/tools/jack-admin kill-server
+
+./prebuilts/sdk/tools/jack-admin start-server
+
+export LC_ALL=C
+
+brunch NOTE_PLUS
+```
+
 Credit : 
 - @darklord4822
 
@@ -32,4 +49,4 @@ Credit :
 - fm Radio
 
 ### not working
-- viceo recording works only with alternative app (like footej camera)
+- video recording works only with alternative app (like footej camera)
